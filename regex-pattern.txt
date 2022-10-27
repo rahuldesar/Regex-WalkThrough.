@@ -1,0 +1,99 @@
+----------------------------------------------------
+1) Matching Characters . -> abc
+----------------------------------------------------
+
+Match	: abcdefg ✅
+Match	: abcde	  ✅
+Match	: abc     ✅
+
+Pattern : abc 
+Pattern : \D\D\D    // Checks three non-digit character 
+
+
+Explanation : Checks if there is `abc` in string in any position.
+              \D => any non digit character.
+----------------------------------------------------
+2) Matching Digits. -> 123s
+----------------------------------------------------
+
+Match :	abc123xyz	    ✅
+Match :	define "123"	✅
+Match	: var g = 123   ✅
+
+Pattern : 123
+Pattern2 : \d\d\d         // Checks three digit together
+
+
+Explanation : Checks if there is `123` in string in any position.
+              \d => any digit character.
+----------------------------------------------------
+3) Matching with WildCard. ---> The Dot `.`
+----------------------------------------------------
+Match :	cat.	    ✅
+Match :	896.	    ✅
+Match :	?=+.	    ✅
+Skip : abc1       ❌
+
+Pattern : .../.
+
+Explanation : .  => wildcard, i.e can match any single character
+          \. => using period in Regex -> '.'
+
+----------------------------------------------------
+4) Matching Characters. [abc] || [ABC] || [123]
+----------------------------------------------------
+Match :	can	 ✅
+Match :	man	 ✅
+Match :	fan	 ✅
+Skip :	dan  ❌
+Skip :	ran  ❌ 
+Skip :	pan  ❌
+
+Pattern : [cmf]an
+Pattern2 : [^drp]an
+
+Explanation : [abc] will only match a single a,b,c and nothing else.
+          [^abc] will match match a single character that isn't a,b,c.
+
+----------------------------------------------------
+5) Excluding Characters.
+----------------------------------------------------
+Match :	hog   ✅
+Match :	dog   ✅
+Skip :	bog   ❌
+
+Pattern  : [^b]og
+Pattern2 : [hd]og
+
+Explanation : 
+
+----------------------------------------------------
+6) Character Ranges.
+----------------------------------------------------
+
+
+
+
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+
+
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+
+
+
+----------------------------------------------------
+
+----------------------------------------------------
+
